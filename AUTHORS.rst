@@ -15,3 +15,4 @@ Contributors
 * Marc Marta - https://github.com/mmarta
 * ClairePhila - https://github.com/ClairePhila
 * Ndubisi Onuora - https://github.com/NdubisiOnuora
+* Thanh Nguyen - https://github.com/thebluesky37
