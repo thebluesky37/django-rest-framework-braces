@@ -1,12 +1,10 @@
 from __future__ import absolute_import, print_function, unicode_literals
-import inspect
 
 from rest_framework import fields
 from rest_framework.fields import *  # noqa
 from rest_framework.fields import _UnvalidatedField  # noqa
 
 from .mixins import AllowBlankNullFieldMixin, EmptyStringFieldMixin
-
 
 FIELDS = [
     'BooleanField',
@@ -24,7 +22,6 @@ FIELDS = [
     'IntegerField',
     'IPAddressField',
     'MultipleChoiceField',
-    'NullBooleanField',
     'RegexField',
     'SlugField',
     'TimeField',
