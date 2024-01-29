@@ -12,7 +12,11 @@ def find_function_args(func):
     """
     try:
         spec = inspect.getfullargspec(func) if hasattr(inspect, 'getfullargspec') else inspect.getargspec(func)
-        return [i for i in spec[0] if i not in IGNORE_ARGS]
+        args = [i for i in spec[0] if i not in IGNORE_ARGS]
+        # update to get agr after *.
+        # Ex: def __init__(self, *, read_only=False, write_only=False). spec[4] = [read_only, write_only]
+        args.extend([i for i in spec[4] if i not in IGNORE_ARGS])
+        return args
     except TypeError:
         return []
 
